@@ -7,11 +7,11 @@ Wang, Charles, Binsheng Gong, Pierre R. Bushel, Jean Thierry-Mieg, Danielle Thie
 
 # Contributors
 
-Data Curator - Teresa Rice
+Data Curator: Teresa Rice - tpillars@bu.edu
 
-Programmer - Maha Naim
+Programmer: Maha Naim - mnaim21@bu.edu
 
-Analyst - Arushi Shrivastava
+Analyst: Arushi Shrivastava - arushi08@bu.edu
 
 # Repository Contents
 
