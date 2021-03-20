@@ -8,7 +8,9 @@ Wang, Charles, Binsheng Gong, Pierre R. Bushel, Jean Thierry-Mieg, Danielle Thie
 # Contributors
 
 Data Curator - Teresa Rice
+
 Programmer - Maha Naim
+
 Analyst - Arushi Shrivastava
 
 # Repository Contents
