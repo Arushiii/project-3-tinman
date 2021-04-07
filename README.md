@@ -20,7 +20,7 @@ Prepare for severly uncreative file names
 Copy toxgroup 4 samples into working directory and run fastqc on the fastq.gz files. You need to manually create 2 directories(out_fastqc and fastq), manually move files to respective folders.
 
 ## commands2.txt
-Runs STAR analysis using rat genome reference from BU, and puts output into directory star_results2 (need to mkdir star_results2 manually).
+Runs STAR analysis using rat genome reference from BU, and puts output into directory star_results2 (need to mkdir star_results2 manually). Will create .bam files.
 
 ## commands3.txt
 Runs MultiQC on out_fastqc files produced from commands.txt
