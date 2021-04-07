@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#qsub -P bf528 -pe smp 8 commands3.txt
+
+source /etc/bashrc
+
+module load python2
+module load multiqc
+
+#multiqc /projectnb/bf528/users/tinman/Project3/datacurator/out_fastqc/*.zip
+multiqc /projectnb/bf528/users/tinman/Project3/datacurator/out_fastqc/star_results2 > multiqc.star

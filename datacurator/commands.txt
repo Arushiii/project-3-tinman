@@ -1,0 +1,30 @@
+!/bin/bash
+
+# qsub -P bf528 -pe smp 8 commands.txt 
+
+module load fastqc
+mkdir out_fastqc
+
+cp /project/bf528/project_3/samples/SRR1177984* .
+cp /project/bf528/project_3/samples/SRR1177985* .
+cp /project/bf528/project_3/samples/SRR1177986* .
+cp /project/bf528/project_3/samples/SRR1177960* .
+cp /project/bf528/project_3/samples/SRR1178023* .
+cp /project/bf528/project_3/samples/SRR1178049* .
+cp /project/bf528/project_3/samples/SRR1177967* .
+cp /project/bf528/project_3/samples/SRR1177968* .
+cp /project/bf528/project_3/samples/SRR1177971* .
+
+fastqc -o out_fastqc SRR1177984_1.fastq.gz SRR1177984_2.fastq.gz 
+fastqc -o out_fastqc SRR1177985_1.fastq.gz SRR1177985_2.fastq.gz 
+fastqc -o out_fastqc SRR1177986_1.fastq.gz SRR1177986_2.fastq.gz 
+fastqc -o out_fastqc SRR1177960_1.fastq.gz SRR1177960_2.fastq.gz
+fastqc -o out_fastqc SRR1178023_1.fastq.gz SRR1178023_2.fastq.gz 
+fastqc -o out_fastqc SRR1178049_1.fastq.gz SRR1178049_2.fastq.gz 
+fastqc -o out_fastqc SRR1177967_1.fastq.gz SRR1177967_2.fastq.gz 
+fastqc -o out_fastqc SRR1177968_1.fastq.gz SRR1177968_2.fastq.gz 
+fastqc -o out_fastqc SRR1177971_1.fastq.gz SRR1177971_2.fastq.gz
+
+# mv to move fastq.gz files into /fastq
+###################################################################
+# go to commands2.txt for STAR commands

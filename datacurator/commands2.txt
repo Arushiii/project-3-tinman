@@ -1,0 +1,83 @@
+!/bin/bash
+# qsub -P bf528 -pe omp 16 commands2.txt 
+
+module load star/2.6.0c
+INDEX=/project/bf528/project_3/reference/rn4_STAR
+FASTQ=/projectnb/bf528/users/tinman/Project3/datacurator/fastq
+
+# for file in /out_fastqc/*.zip ; \
+# do STAR --genomeDir $INDEX \
+# --runThreadN 16 \ 
+# --readFilesIn /projectnb/bf528/users/tinman/Project3/datacurator/fastq \
+# --readFilesCommand zcat \ 
+# --outSAMType BAM SortedByCoordinate \
+# --outFileNamePrefix /star_result/"$file".star\
+# ;done
+
+
+STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177960_1.fastq.gz $FASTQ/SRR1177960_2.fastq.gz --readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177960_star_
+
+STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177971_1.fastq.gz $FASTQ/SRR1177971_2.fastq.gz --readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177971_star_
+
+STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177984_1.fastq.gz $FASTQ/SRR1177984_2.fastq.gz --readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177984_star_
+
+STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177985_1.fastq.gz $FASTQ/SRR1177985_2.fastq.gz --readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177985_star_
+
+STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177986_1.fastq.gz $FASTQ/SRR1177986_2.fastq.gz --readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177986_star_
+
+STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1178023_1.fastq.gz $FASTQ/SRR1178023_2.fastq.gz --readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1178023_star_
+
+STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1178049_1.fastq.gz $FASTQ/SRR1178049_2.fastq.gz --readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1178049_star_
+
+STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177967_1.fastq.gz $FASTQ/SRR1177967_2.fastq.gz --readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177967_star_
+
+STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177968_1.fastq.gz $FASTQ/SRR1177968_2.fastq.gz --readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177968_star_
+
+
+
+
+
+#STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177960_1.fastq.gz\ 
+#--readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177960_star_
+#STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177960_2.fastq.gz\ 
+#--readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177960_star_
+
+#STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177971_1.fastq.gz\ 
+#--readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177971_star_
+#STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177971_2.fastq.gz\ 
+#--readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177971_star_
+
+#STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177984_1.fastq.gz\
+#--readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177984_star_
+#STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177984_2.fastq.gz\
+#--readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177984_star_
+
+#STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177985_1.fastq.gz\
+#--readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177985_star_
+#STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177985_2.fastq.gz\
+#--readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177985_star_
+
+#STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177986_1.fastq.gz\
+#--readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177986_star_
+#STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177986_2.fastq.gz\
+#--readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177986_star_
+
+#STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1178023_1.fastq.gz\
+#--readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1178023_star_
+#STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1178023_2.fastq.gz\
+#--readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1178023_star_
+
+#STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1178049_1.fastq.gz\
+#--readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1178049_star_
+#STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1178049_2.fastq.gz\
+#--readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1178049_star_
+
+#STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177967_1.fastq.gz\
+#--readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177967_star_
+#STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177967_2.fastq.gz\
+#--readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177967_star_
+
+#STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177968_1.fastq.gz\
+#--readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177968_star_
+#STAR --genomeDir $INDEX --runThreadN 16 --readFilesIn $FASTQ/SRR1177968_2.fastq.gz\
+#--readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outFileNamePrefix star_results2/SRR1177968_star_
