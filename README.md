@@ -16,7 +16,7 @@ Analyst: Arushi Shrivastava - arushi08@bu.edu
 # Repository Contents
 Prepare for severly uncreative file names
 
-Data Curator
+# Data Curator
 ## commands.txt
 Copy toxgroup 4 samples into working directory and run fastqc on the fastq.gz files. You need to manually create 2 directories(out_fastqc and fastq), manually move files to respective folders.
 
@@ -29,7 +29,7 @@ Runs MultiQC on out_fastqc files produced from commands.txt
 ## datacuratorRcommands.R
 Utilizes libraries: tidyverse, dplyr, and gridExtra. Individually loads in each star log.final.out file into a table (modify the object to include the sample ID) full join all STAR output tables. Creates STAR summary table of select QC metrics, creates png from this table.
 
-Programmer
+# Programmer
 
 ## featureCounts.qsub
 Runs featureCounts on all 9 BAM files produced from the STAR analysis
